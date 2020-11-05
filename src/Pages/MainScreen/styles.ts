@@ -143,6 +143,7 @@ export const ForgotPasswordMessage = styled.p `
   font-size: 12px;
   font-family: 'Montserrat';
   margin: 20px 0;
+  cursor: pointer;
 `;
 
 export const Button = styled.div `
