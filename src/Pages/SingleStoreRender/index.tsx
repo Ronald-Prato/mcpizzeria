@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { SingleStore } from '../RestaurantsList/index.d';
 
-import { MainWrapper, MainLogo, StoreName, Card, BackIconContainer, Circle, CardContainer, Info, ImgContainer, StoreAdress, ProductName, ProductImg, SingleProduct, StoreDescription, ProductsContainer } from './styles';
+import { MainWrapper, MainLogo, StoreName, Card, SocialMediaContainer, ProductInfo, BackIconContainer, Circle, CardContainer, Info, ImgContainer, StoreAdress, ProductName, ProductImg, SingleProduct, StoreDescription, ProductsContainer } from './styles';
 
-import { IoMdArrowBack } from 'react-icons/io';
+import { IoMdArrowBack, IoLogoInstagram, IoLogoFacebook } from 'react-icons/io';
 
 type SingleStoreRenderProps = (props: {
   store: SingleStore, 
@@ -13,6 +13,8 @@ type SingleStoreRenderProps = (props: {
 
 const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
 
+  const [translationClass, setTranslationClass] = useState('translated');
+
   useEffect(() => {
     const card: any = document.querySelector('.card');
     const container = document.querySelector('.card-container');
@@ -20,6 +22,8 @@ const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
     const name: any = document.querySelector('.store-name');
     const address: any = document.querySelector('.store-address');
     const description: any = document.querySelector('.store-description');
+    const logoInsta: any = document.querySelector('.icon-insta');
+    const logoFace: any = document.querySelector('.icon-face');
 
     container?.addEventListener("mousemove", (e: any) => {
       let xAxys = (window.innerWidth / 2 - e.pageX) / -12;
@@ -33,16 +37,22 @@ const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
       name.style.transform = 'translateZ(50px)';
       address.style.transform = 'translateZ(50px)';
       description.style.transform = 'translateZ(50px)';
+      logoInsta.style.transform = 'translateZ(50px)';
+      logoFace.style.transform = 'translateZ(50px)';
     });
 
     container?.addEventListener("mouseleave", () => {
       card.style.transition = 'all .5s ease';
+      logoInsta.style.transition = 'all .35s ease';
+      logoFace.style.transition = 'all .6s ease';
 
       card.style.transform = `rotateY(0deg) rotateX(0deg)`;
       name.style.transform = 'translateZ(0)';
       logoImg.style.transform = 'translateZ(0)';
       address.style.transform = 'translateZ(0)';
       description.style.transform = 'translateZ(0)';
+      logoInsta.style.transform = 'translateZ(0)';
+      logoFace.style.transform = 'translateZ(0)';
     });
 
     return () => {
@@ -66,15 +76,28 @@ const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
             <StoreAdress className={'store-address'}> { store.address } </StoreAdress>
             <StoreDescription className={'store-description'}> { store.description } </StoreDescription>
           </Info>
+
+          <SocialMediaContainer>
+            <a className={'icon-insta'} href={store.instagram} target={"blank"}>
+              <IoLogoInstagram style={{cursor: 'pointer'}} color={'black'} size={30}/>
+            </a>
+            <a className={'icon-face'} href={store.facebook} target={"blank"}>
+              <IoLogoFacebook style={{cursor: 'pointer'}} color={'black'} size={30}/>
+            </a>
+          </SocialMediaContainer>
         </Card>
       </CardContainer>
+
+      
 
       <ProductsContainer>
         {
           store.products.map((product) => 
-            <SingleProduct key={product.id}>
+            <SingleProduct className={'single-product'} key={product.id}>
               <ProductImg src={product.img}/>
-              <ProductName> { product.name } </ProductName>
+              <ProductInfo className={translationClass}>
+                <ProductName> { product.name } </ProductName>
+              </ProductInfo>
             </SingleProduct>
           )
         }
