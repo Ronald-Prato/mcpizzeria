@@ -15,6 +15,7 @@ const MainScreen = () => {
   const getInitialJson = () => {
     fetch(URL)
       .then(res => console.log(res))
+      .catch(err => console.log(err));
   };
   useEffect(getInitialJson, []);
 
