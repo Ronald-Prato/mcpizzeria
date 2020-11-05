@@ -67,6 +67,7 @@ export const Circle = styled.div `
   margin: auto;
   left: 0; right: 0;
   top: 10%;
+  z-index: -1;
 `;
 
 
@@ -106,13 +107,17 @@ export const StoreAdress = styled.p `
 `;
 
 export const StoreDescription = styled.p `
-  margin: 25px 0 0 0;
   font-family: 'Montserrat';
   font-weight: 500;
   color: ${lightColor};
   text-align: center;
   font-size: 14px;
   transition: all .35s ease-out;
+  margin: 5px 0 0 0;
+
+  @media (min-width: 920px) {
+    margin: 25px 0 0 0;
+  }
 `;
 
 export const ProductsContainer = styled.div `
@@ -123,21 +128,33 @@ export const ProductsContainer = styled.div `
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 40px;
 `;
 
 export const SingleProduct = styled.div `
-  width: 340px;
+  width: 320px;
   margin-bottom: 20px;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  background: ${primaryColor};
-  box-shadow: 0 3px 10px #808080;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .4);
   cursor: pointer;
 `;
 
 export const ProductImg = styled.img `
   width: 150px;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+`;
+
+export const ProductInfo = styled.div `
+  width: 170px;
+  background: ${primaryColor};
+  display: flex; 
+  align-items: center;
+  transition: ease-in-out 250ms;
+  padding-right: 10px;
+  box-sizing: border-box;
 `;
 
 export const ProductName = styled.p `
@@ -151,4 +168,18 @@ export const BackIconContainer = styled.div `
   top: 3%;
   right: 4%;
   cursor: pointer;
+`;
+
+export const SocialMediaContainer = styled.div `
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+  margin-top: 0;
+
+  @media (min-width: 920px) {
+    margin-top: 40px;
+  }
 `;

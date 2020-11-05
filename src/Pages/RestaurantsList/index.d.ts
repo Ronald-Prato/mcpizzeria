@@ -6,6 +6,8 @@ export type SingleStore = {
   logo: string,
   address: string,
   description: string,
+  instagram: string,
+  facebook: string,
   products: {
     id: number,
     name: string,
