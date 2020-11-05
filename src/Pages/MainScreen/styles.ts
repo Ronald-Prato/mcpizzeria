@@ -3,7 +3,7 @@ import { primaryColor, lightColor } from '../../constants';
 
 export const MainWrapper = styled.div `
   width: 100vw;
-  max-width: 1350px;
+  max-width: 1550px;
   margin: 0 auto;
   height: 100vh;
   overflow: hidden;
@@ -66,8 +66,6 @@ export const BackgroundImage = styled.img `
 
   position: absolute;
   z-index: 1;
-  max-width: 500px; 
-  max-height: 500px;
   width: 60%; height: auto;
   top: 2%;
   margin: 0 auto;
@@ -81,8 +79,8 @@ export const BackgroundImage = styled.img `
   }
 
   @media (min-width: 920px) {
-    width: 500px; 
-    height: 500px;
+    width: 600px; 
+    height: 600px;
     margin: auto;
     right: 0; left: 0;
     top: 0; bottom: 0;

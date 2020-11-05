@@ -24,27 +24,33 @@
         "products": [
           {
             "id": 1,
-            "name": "Pizza de Pollo"
+            "name": "Pizza de Pollo",
+            "img": "https://i.imgur.com/zeY319r.png"
           },
           {
             "id": 2,
-            "name": "Piza Pollo y Champiñones"
+            "name": "Piza Pollo y Champiñones",
+            "img": "https://i.imgur.com/VX32P7t.png"
           },
           {
             "id": 3,
-            "name": "Pizza Vegetales"
+            "name": "Pizza Vegetales",
+            "img": "https://i.imgur.com/uDhN1Yv.png"
           },
           {
             "id": 4,
-            "name": "Pizza Vegetales y Atun "
+            "name": "Pizza Vegetales y Atun",
+            "img": "https://i.imgur.com/tEusfMA.png"
           },
           {
             "id": 5,
-            "name": "Pizza 3 Quesos con Champiñones"
+            "name": "Pizza 3 Quesos con Champiñones",
+            "img": "https://i.imgur.com/b4Q0aMm.png"
           },
           {
             "id": 6,
-            "name": "Pizza Jamon y Queso"
+            "name": "Pizza Jamon y Queso",
+            "img": "https://i.imgur.com/mvk8yd9.png"
           }
         ]
       },
@@ -57,27 +63,33 @@
         "products": [
           {
             "id": 1,
-            "name": "Pizza de Pollo"
+            "name": "Pizza de Pollo",
+            "img": "https://i.imgur.com/zeY319r.png"
           },
           {
             "id": 2,
-            "name": "Piza Pollo y Champiñones"
+            "name": "Piza Pollo y Champiñones",
+            "img": "https://i.imgur.com/VX32P7t.png"
           },
           {
             "id": 3,
-            "name": "Pizza Vegetales"
+            "name": "Pizza Vegetales",
+            "img": "https://i.imgur.com/uDhN1Yv.png"
           },
           {
             "id": 4,
-            "name": "Pizza Vegetales y Atun "
+            "name": "Pizza Vegetales y Atun",
+            "img": "https://i.imgur.com/tEusfMA.png"
           },
           {
             "id": 5,
-            "name": "Pizza 3 Quesos con Champiñones"
+            "name": "Pizza 3 Quesos con Champiñones",
+            "img": "https://i.imgur.com/b4Q0aMm.png"
           },
           {
             "id": 6,
-            "name": "Pizza Jamon y Queso"
+            "name": "Pizza Jamon y Queso",
+            "img": "https://i.imgur.com/mvk8yd9.png"
           }
         ]
       },
@@ -90,27 +102,33 @@
         "products": [
           {
             "id": 1,
-            "name": "Pizza de Pollo"
+            "name": "Pizza de Pollo",
+            "img": "https://i.imgur.com/zeY319r.png"
           },
           {
             "id": 2,
-            "name": "Piza Pollo y Champiñones"
+            "name": "Piza Pollo y Champiñones",
+            "img": "https://i.imgur.com/VX32P7t.png"
           },
           {
             "id": 3,
-            "name": "Pizza Vegetales"
+            "name": "Pizza Vegetales",
+            "img": "https://i.imgur.com/uDhN1Yv.png"
           },
           {
             "id": 4,
-            "name": "Pizza Vegetales y Atun "
+            "name": "Pizza Vegetales y Atun",
+            "img": "https://i.imgur.com/tEusfMA.png"
           },
           {
             "id": 5,
-            "name": "Pizza 3 Quesos con Champiñones"
+            "name": "Pizza 3 Quesos con Champiñones",
+            "img": "https://i.imgur.com/b4Q0aMm.png"
           },
           {
             "id": 6,
-            "name": "Pizza Jamon y Queso"
+            "name": "Pizza Jamon y Queso",
+            "img": "https://i.imgur.com/mvk8yd9.png"
           }
         ]
       },
@@ -123,27 +141,33 @@
         "products": [
           {
             "id": 1,
-            "name": "Pizza de Pollo"
+            "name": "Pizza de Pollo",
+            "img": "https://i.imgur.com/zeY319r.png"
           },
           {
             "id": 2,
-            "name": "Piza Pollo y Champiñones"
+            "name": "Piza Pollo y Champiñones",
+            "img": "https://i.imgur.com/VX32P7t.png"
           },
           {
             "id": 3,
-            "name": "Pizza Vegetales"
+            "name": "Pizza Vegetales",
+            "img": "https://i.imgur.com/uDhN1Yv.png"
           },
           {
             "id": 4,
-            "name": "Pizza Vegetales y Atun "
+            "name": "Pizza Vegetales y Atun",
+            "img": "https://i.imgur.com/tEusfMA.png"
           },
           {
             "id": 5,
-            "name": "Pizza 3 Quesos con Champiñones"
+            "name": "Pizza 3 Quesos con Champiñones",
+            "img": "https://i.imgur.com/b4Q0aMm.png"
           },
           {
             "id": 6,
-            "name": "Pizza Jamon y Queso"
+            "name": "Pizza Jamon y Queso",
+            "img": "https://i.imgur.com/mvk8yd9.png"
           }
         ]
       },
@@ -156,27 +180,33 @@
         "products": [
           {
             "id": 1,
-            "name": "Pizza de Pollo"
+            "name": "Pizza de Pollo",
+            "img": "https://i.imgur.com/zeY319r.png"
           },
           {
             "id": 2,
-            "name": "Piza Pollo y Champiñones"
+            "name": "Piza Pollo y Champiñones",
+            "img": "https://i.imgur.com/VX32P7t.png"
           },
           {
             "id": 3,
-            "name": "Pizza Vegetales"
+            "name": "Pizza Vegetales",
+            "img": "https://i.imgur.com/uDhN1Yv.png"
           },
           {
             "id": 4,
-            "name": "Pizza Vegetales y Atun "
+            "name": "Pizza Vegetales y Atun",
+            "img": "https://i.imgur.com/tEusfMA.png"
           },
           {
             "id": 5,
-            "name": "Pizza 3 Quesos con Champiñones"
+            "name": "Pizza 3 Quesos con Champiñones",
+            "img": "https://i.imgur.com/b4Q0aMm.png"
           },
           {
             "id": 6,
-            "name": "Pizza Jamon y Queso"
+            "name": "Pizza Jamon y Queso",
+            "img": "https://i.imgur.com/mvk8yd9.png"
           }
         ]
       },
@@ -189,27 +219,33 @@
         "products": [
           {
             "id": 1,
-            "name": "Pizza de Pollo"
+            "name": "Pizza de Pollo",
+            "img": "https://i.imgur.com/zeY319r.png"
           },
           {
             "id": 2,
-            "name": "Piza Pollo y Champiñones"
+            "name": "Piza Pollo y Champiñones",
+            "img": "https://i.imgur.com/VX32P7t.png"
           },
           {
             "id": 3,
-            "name": "Pizza Vegetales"
+            "name": "Pizza Vegetales",
+            "img": "https://i.imgur.com/uDhN1Yv.png"
           },
           {
             "id": 4,
-            "name": "Pizza Vegetales y Atun "
+            "name": "Pizza Vegetales y Atun",
+            "img": "https://i.imgur.com/tEusfMA.png"
           },
           {
             "id": 5,
-            "name": "Pizza 3 Quesos con Champiñones"
+            "name": "Pizza 3 Quesos con Champiñones",
+            "img": "https://i.imgur.com/b4Q0aMm.png"
           },
           {
             "id": 6,
-            "name": "Pizza Jamon y Queso"
+            "name": "Pizza Jamon y Queso",
+            "img": "https://i.imgur.com/mvk8yd9.png"
           }
         ]
       }

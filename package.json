@@ -43,6 +43,7 @@
   "devDependencies": {
     "@types/react-router-dom": "^5.1.6",
     "@types/styled-components": "^5.1.4",
+    "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1",
     "sweetalert2": "^10.9.0"
