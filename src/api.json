@@ -17,7 +17,8 @@
     "stores": [
       {
         "id": 1,
-        "name": "Pizzeria Capitan America",
+        "name": "Pano's Pizza",
+        "logo": "https://i.imgur.com/mHpTneT.png",
         "address": "Calle 1 #2-3",
         "description": "Esta pizzeria se especializa en ingredientes salados",
         "products": [
@@ -49,7 +50,8 @@
       },
       {
         "id": 2,
-        "name": "Pizzeria Iron Man",
+        "name": "SBarro",
+        "logo": "https://i.imgur.com/vNVuOyT.png",
         "address": "Calle 2 #3-4",
         "description": "Esta pizzeria se especializa en ingredientes picantes",
         "products": [
@@ -81,7 +83,8 @@
       },
       {
         "id": 3,
-        "name": "Pizzeria Thor",
+        "name": "Pizzeria Camión",
+        "logo": "https://i.imgur.com/yiECjaR.png",
         "address": "Calle 3 #4-5",
         "description": "Esta pizzeria se especializa en ingredientes vegetales",
         "products": [
@@ -113,7 +116,8 @@
       },
       {
         "id": 4,
-        "name": "Pizzeria Black Widow",
+        "name": "Voglia Di Pizza",
+        "logo": "https://i.imgur.com/iVnyxcO.png",
         "address": "Calle 4 #5-6",
         "description": "Esta pizzeria se especializa en ingredientes marinos",
         "products": [
@@ -145,9 +149,43 @@
       },
       {
         "id": 5,
-        "name": "Pizzeria Spider Man",
+        "name": "Stroller Pizza",
+        "logo": "https://i.imgur.com/xqmwqdo.png",
         "address": "Calle 5 #6-7",
         "description": "Esta pizzeria se especializa en ingredientes tropicales",
+        "products": [
+          {
+            "id": 1,
+            "name": "Pizza de Pollo"
+          },
+          {
+            "id": 2,
+            "name": "Piza Pollo y Champiñones"
+          },
+          {
+            "id": 3,
+            "name": "Pizza Vegetales"
+          },
+          {
+            "id": 4,
+            "name": "Pizza Vegetales y Atun "
+          },
+          {
+            "id": 5,
+            "name": "Pizza 3 Quesos con Champiñones"
+          },
+          {
+            "id": 6,
+            "name": "Pizza Jamon y Queso"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Trulli",
+        "logo": "https://i.imgur.com/yv7RWdy.png",
+        "address": "Calle 9 #10-11",
+        "description": "Esta pizzeria se especializa en ingredientes mediterraneos",
         "products": [
           {
             "id": 1,

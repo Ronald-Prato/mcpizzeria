@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { primaryColor } from '../../constants';
+import { primaryColor, lightColor } from '../../constants';
 
 export const MainWrapper = styled.div `
   width: 100vw;
@@ -44,6 +44,7 @@ export const MainContentLogin = styled.div `
   }
 `;
 
+
 export const BackgroundImageContainer = styled.div `
   
 
@@ -77,8 +78,6 @@ export const BackgroundImage = styled.img `
     max-width: 600px; 
     max-height: 600px;
     width: 50%; height: auto;
-    margin: auto;
-    right: 0; left: 0;
   }
 
   @media (min-width: 920px) {
@@ -102,14 +101,14 @@ export const BigMessage = styled.p `
 `;
 
 export const SmallMessage = styled.p `
-  color: #909090;
+  color: ${lightColor};
   margin: 0 0 25px 0;
 `;
 
 export const InputContainer = styled.div `
   width: 100%;
   max-width: 300px;
-  border: .5px solid #909090;
+  border: .5px solid ${lightColor};
   border-radius: 3px;
   display: flex;
   justify-content: space-between;
@@ -129,7 +128,7 @@ export const Input = styled.input `
   background: none;
   ::placeholder,
   ::-webkit-input-placeholder {
-    color: #909090;
+    color: ${lightColor};
     font-weight: lighter;
   }
 `;

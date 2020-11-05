@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { MainWrapper, BackgroundImage, BackgroundImageContainer, MainContentLogin, ButtonMessage, LogoImg, Button, ForgotPasswordMessage, BigMessage, SmallMessage, Icon, InputContainer, Input } from './styles';
 
-import Swal from 'sweetalert2'
-
 import logo from '../../assets/logo.png';
 import backgroundPizza from '../../assets/Pizza.png';
 import personIcon from '../../assets/ic_usuario.png';
@@ -11,6 +9,7 @@ import lockIcon from '../../assets/ic_password.png';
 import API from '../../api.json';
 
 import { Toast } from '../../alerts';
+import RestaurantsList from '../RestaurantsList';
 
 const COMP_NAME = 'main-screen';
 
@@ -45,7 +44,7 @@ const MainScreen = () => {
       return false; 
     } else if (!registeredUserNames.includes(credentials.username)) { //if typed user is not in the json
       setAlertMessage('El usuario no existe');
-      return false; 
+      return false;
     } else if (credentials.password !== currentUserObj.password) { //if typed user password isn't correct
       setAlertMessage('Contraseña incorrecta');
       return false;    
@@ -99,7 +98,7 @@ const MainScreen = () => {
           </Button>
         </MainContentLogin>
         :
-        <div onClick={() => localStorage.removeItem('loggedUser')}> aasdasdasd </div>
+        <RestaurantsList stores={API.response.stores}/>
       }
     </MainWrapper>
   );
