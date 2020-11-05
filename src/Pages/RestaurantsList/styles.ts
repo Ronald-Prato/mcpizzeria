@@ -34,6 +34,7 @@ export const CategoryContainer = styled.div `
   justify-content: space-between;
   align-items: center;
   color: ${lightColor};
+  margin-bottom: 20px;
 
   @media (min-width: 920px) {
     margin-bottom: 70px;
@@ -96,11 +97,13 @@ export const StoresContainer = styled.div `
     margin-top: 60px;
     justify-content: space-between;
     padding: 0;
+    overflow: hidden;
   } 
 `;
 
 export const SingleStore = styled.div `
   width: 150px;
+  cursor: pointer;
   
   @media (min-width: 920px) {
     width: 200px;

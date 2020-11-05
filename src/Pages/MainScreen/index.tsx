@@ -11,22 +11,28 @@ import API from '../../api.json';
 import { Toast } from '../../alerts';
 import RestaurantsList from '../RestaurantsList';
 
+import { SingleStore } from '../RestaurantsList/index.d';
+import SingleStoreRender from '../SingleStoreRender';
+
 const COMP_NAME = 'main-screen';
+let selectedStoreInit: SingleStore;
 
 const MainScreen = () => {
   const users = API.response.users;
   const [credentials, setCredentials] = useState({username: '', password: ''});
   const [alertMessage, setAlertMessage] = useState('');
   const [hasLogin, setHasLogin] = useState(false);
+  const [showSingleStore, setShowSingleStore] = useState(false);
+  const [selectedStore, setSelectedStore] = useState(selectedStoreInit);
 
-  const checkCurrentSession = () => {
+  const checkCurrentSession = () => { // check the session at first render
     if (localStorage.getItem('loggedUser')) {
       setHasLogin(true);
     }
   };
   useEffect(checkCurrentSession, []);
 
-  const fireAlertMessage = () => {
+  const fireAlertMessage = () => { //fires the alert message when this is changed
     alertMessage.length &&
     Toast.fire({
       icon: 'error',
@@ -34,6 +40,11 @@ const MainScreen = () => {
     })
   };
   useEffect(fireAlertMessage, [alertMessage]);
+  
+  const selectStore = (singleStore: SingleStore) => {
+    setSelectedStore(singleStore);
+    setShowSingleStore(true);
+  };
 
   const validators = () => {
     const registeredUserNames = users.map((user) => user.email);
@@ -50,7 +61,7 @@ const MainScreen = () => {
       return false;    
     }
     return currentUserObj;
-  }
+  };
   
   const handleLogin = () => {
     const isUser = validators();
@@ -97,8 +108,11 @@ const MainScreen = () => {
             <ButtonMessage> Iniciar Sesión </ButtonMessage>
           </Button>
         </MainContentLogin>
-        :
-        <RestaurantsList stores={API.response.stores}/>
+
+        : !showSingleStore ? // If a single store is not selected yet
+          <RestaurantsList showSingleStore={(singleStore) => selectStore(singleStore)} stores={API.response.stores}/>
+        : // If a single store is selected
+        <SingleStoreRender backToList={() => setShowSingleStore(false)} store={selectedStore} /> 
       }
     </MainWrapper>
   );

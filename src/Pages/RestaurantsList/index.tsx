@@ -4,7 +4,7 @@ import { MainWrapper, CategoryContainer, CategoryMessage, SingleStoreName, Singl
 
 import { RestaurantsListProps } from './index.d';
 
-const RestaurantsList: RestaurantsListProps = ({ stores }) => {
+const RestaurantsList: RestaurantsListProps = ({ stores, showSingleStore }) => {
   return (
     <MainWrapper>
       <CategoryContainer>
@@ -18,7 +18,7 @@ const RestaurantsList: RestaurantsListProps = ({ stores }) => {
       <StoresContainer>
         {
           stores.map((store) => 
-            <SingleStore key={store.id}>
+            <SingleStore onClick={() => showSingleStore(store)} key={store.id}>
               <SingleStoreLogo src={store.logo}/>
               <SingleStoreName> { store.name } </SingleStoreName>
               <SingleStoreAddress> { store.address } </SingleStoreAddress>
