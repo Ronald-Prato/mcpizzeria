@@ -17,6 +17,7 @@ const MainScreen = () => {
       .then(res => console.log(res))
   };
   useEffect(getInitialJson, []);
+  
 
   return (
     <MainWrapper className={`${COMP_NAME}__main-wrapper`}>
