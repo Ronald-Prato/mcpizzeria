@@ -1,0 +1,180 @@
+{
+  "response": {
+    "users": [
+      {
+        "id": 1,
+        "name": "Pepito Perez",
+        "email": "pperez@perez.com",
+        "password": "pperezs123"
+      },
+      {
+        "id": 2,
+        "name": "Juanpis Gonzalez",
+        "email": "jgonzalez@gonzalez.com",
+        "password": "jgonzalez123"
+      }
+    ],
+    "stores": [
+      {
+        "id": 1,
+        "name": "Pizzeria Capitan America",
+        "address": "Calle 1 #2-3",
+        "description": "Esta pizzeria se especializa en ingredientes salados",
+        "products": [
+          {
+            "id": 1,
+            "name": "Pizza de Pollo"
+          },
+          {
+            "id": 2,
+            "name": "Piza Pollo y Champiñones"
+          },
+          {
+            "id": 3,
+            "name": "Pizza Vegetales"
+          },
+          {
+            "id": 4,
+            "name": "Pizza Vegetales y Atun "
+          },
+          {
+            "id": 5,
+            "name": "Pizza 3 Quesos con Champiñones"
+          },
+          {
+            "id": 6,
+            "name": "Pizza Jamon y Queso"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Pizzeria Iron Man",
+        "address": "Calle 2 #3-4",
+        "description": "Esta pizzeria se especializa en ingredientes picantes",
+        "products": [
+          {
+            "id": 1,
+            "name": "Pizza de Pollo"
+          },
+          {
+            "id": 2,
+            "name": "Piza Pollo y Champiñones"
+          },
+          {
+            "id": 3,
+            "name": "Pizza Vegetales"
+          },
+          {
+            "id": 4,
+            "name": "Pizza Vegetales y Atun "
+          },
+          {
+            "id": 5,
+            "name": "Pizza 3 Quesos con Champiñones"
+          },
+          {
+            "id": 6,
+            "name": "Pizza Jamon y Queso"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Pizzeria Thor",
+        "address": "Calle 3 #4-5",
+        "description": "Esta pizzeria se especializa en ingredientes vegetales",
+        "products": [
+          {
+            "id": 1,
+            "name": "Pizza de Pollo"
+          },
+          {
+            "id": 2,
+            "name": "Piza Pollo y Champiñones"
+          },
+          {
+            "id": 3,
+            "name": "Pizza Vegetales"
+          },
+          {
+            "id": 4,
+            "name": "Pizza Vegetales y Atun "
+          },
+          {
+            "id": 5,
+            "name": "Pizza 3 Quesos con Champiñones"
+          },
+          {
+            "id": 6,
+            "name": "Pizza Jamon y Queso"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Pizzeria Black Widow",
+        "address": "Calle 4 #5-6",
+        "description": "Esta pizzeria se especializa en ingredientes marinos",
+        "products": [
+          {
+            "id": 1,
+            "name": "Pizza de Pollo"
+          },
+          {
+            "id": 2,
+            "name": "Piza Pollo y Champiñones"
+          },
+          {
+            "id": 3,
+            "name": "Pizza Vegetales"
+          },
+          {
+            "id": 4,
+            "name": "Pizza Vegetales y Atun "
+          },
+          {
+            "id": 5,
+            "name": "Pizza 3 Quesos con Champiñones"
+          },
+          {
+            "id": 6,
+            "name": "Pizza Jamon y Queso"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Pizzeria Spider Man",
+        "address": "Calle 5 #6-7",
+        "description": "Esta pizzeria se especializa en ingredientes tropicales",
+        "products": [
+          {
+            "id": 1,
+            "name": "Pizza de Pollo"
+          },
+          {
+            "id": 2,
+            "name": "Piza Pollo y Champiñones"
+          },
+          {
+            "id": 3,
+            "name": "Pizza Vegetales"
+          },
+          {
+            "id": 4,
+            "name": "Pizza Vegetales y Atun "
+          },
+          {
+            "id": 5,
+            "name": "Pizza 3 Quesos con Champiñones"
+          },
+          {
+            "id": 6,
+            "name": "Pizza Jamon y Queso"
+          }
+        ]
+      }
+    ]
+  }
+}
