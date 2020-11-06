@@ -46,8 +46,6 @@ export const MainContentLogin = styled.div `
 
 
 export const BackgroundImageContainer = styled.div `
-  
-
   position: absolute;
   top: 0; left: 0;
   width: 100vw;

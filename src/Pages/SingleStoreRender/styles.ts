@@ -114,9 +114,11 @@ export const StoreDescription = styled.p `
   font-size: 14px;
   transition: all .35s ease-out;
   margin: 5px 0 0 0;
+  width: 100%;
 
   @media (min-width: 920px) {
     margin: 25px 0 0 0;
+    width: 100%;
   }
 `;
 

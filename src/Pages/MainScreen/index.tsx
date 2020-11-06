@@ -10,9 +10,10 @@ import API from '../../api.json';
 
 import { Toast } from '../../alerts';
 import RestaurantsList from '../RestaurantsList';
+import SingleStoreRender from '../SingleStoreRender';
+import ConfigView from '../ConfigView';
 
 import { SingleStore } from '../RestaurantsList/index.d';
-import SingleStoreRender from '../SingleStoreRender';
 
 const COMP_NAME = 'main-screen';
 let selectedStoreInit: SingleStore;
@@ -28,6 +29,8 @@ const MainScreen = () => {
   const checkCurrentSession = () => { // check the session at first render
     if (localStorage.getItem('loggedUser')) {
       setHasLogin(true);
+    } else {
+      setHasLogin(false);
     }
   };
   useEffect(checkCurrentSession, []);
@@ -110,7 +113,7 @@ const MainScreen = () => {
         </MainContentLogin>
 
         : !showSingleStore ? // If a single store is not selected yet
-          <RestaurantsList showSingleStore={(singleStore) => selectStore(singleStore)} stores={API.response.stores}/>
+          <RestaurantsList signOut={() => setHasLogin(false)} showSingleStore={(singleStore) => selectStore(singleStore)} stores={API.response.stores}/>
         : // If a single store is selected
         <SingleStoreRender backToList={() => setShowSingleStore(false)} store={selectedStore} /> 
       }
