@@ -58,6 +58,7 @@ export const CardContainer = styled.div `
   @media (min-width: 920px) {
     width: 600px;
     min-height: 400px;
+    margin: auto;
     display: flex; 
     justify-content: center;
     perspective: 1000px;
@@ -139,7 +140,7 @@ export const StoreDescription = styled.p `
   font-size: 14px;
   transition: all .35s ease-out;
   margin: 5px 0 0 0;
-  width: 100%;
+  width: 90%;
 
   @media (min-width: 920px) {
     margin: 25px 0 0 0;
