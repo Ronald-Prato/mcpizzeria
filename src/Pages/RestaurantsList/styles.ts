@@ -225,7 +225,7 @@ export const AccountIconContainer = styled.div `
   height: 40px;
   overflow: hidden;
   border-radius: 50%;
-  border: 1px solid #323232;
+  border: 2px solid #323232;
 `;
 
 export const ProfilePicture = styled.img `
