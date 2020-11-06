@@ -5,8 +5,8 @@ import 'jest-styled-components';
 
 import { mount } from 'enzyme';
 
-import SingleStoreRender from '../Pages/SingleStoreRender/index';
-import { sampleStore } from '../constants';
+import SingleStoreRender from './index';
+import { sampleStore } from '../../constants';
 
 let singleStoreRender: any;
 
@@ -33,18 +33,21 @@ describe('<SingleStoreRender />', () => {
     expect(singleStoreRender.find('div.image-container').exists()).toBeTruthy();
     expect(singleStoreRender.find('div.store-img').exists()).toBeTruthy();
     expect(singleStoreRender.find('div.info').exists()).toBeTruthy();
-    expect(singleStoreRender.find('div.store-name').exists()).toBeTruthy();
-    expect(singleStoreRender.find('div.store-address').exists()).toBeTruthy();
-    expect(singleStoreRender.find('div.store-description').exists()).toBeTruthy();
+    expect(singleStoreRender.find('p.store-name').exists()).toBeTruthy();
+    expect(singleStoreRender.find('p.store-address').exists()).toBeTruthy();
+    expect(singleStoreRender.find('p.store-description').exists()).toBeTruthy();
     expect(singleStoreRender.find('div.social-media-container').exists()).toBeTruthy();
     expect(singleStoreRender.find('a.icon-insta').exists()).toBeTruthy();
     expect(singleStoreRender.find('a.icon-face').exists()).toBeTruthy();
     expect(singleStoreRender.find('div.products-container').exists()).toBeTruthy();
     expect(singleStoreRender.find('div.single-product').exists()).toBeTruthy();
     expect(singleStoreRender.find('div.product-img').exists()).toBeTruthy();
-    expect(singleStoreRender.find('div.products-container').exists()).toBeTruthy();
-    expect(singleStoreRender.find('div.products-container').exists()).toBeTruthy();
-    expect(singleStoreRender.find('div.products-container').exists()).toBeTruthy();
-    expect(singleStoreRender.find('div.products-container').exists()).toBeTruthy();
+    expect(singleStoreRender.find('div.product-info').exists()).toBeTruthy();
+    expect(singleStoreRender.find('p.product-name').exists()).toBeTruthy();
+  });
+
+  it ('should call the backToList method by clicking the back icon', () => {
+    singleStoreRender.find('div.back-icon-container').simulate('click');
+    expect(backToLisMock).toHaveBeenCalled();
   });
 })

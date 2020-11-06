@@ -112,8 +112,8 @@ const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
           store.products.map((product) => 
             <SingleProduct className={'single-product'} key={product.id}>
               <ProductImg className={'product-img'} src={product.img}/>
-              <ProductInfo className={translationClass}>
-                <ProductName> { product.name } </ProductName>
+              <ProductInfo className={`product-info ${translationClass}`}>
+                <ProductName className={'product-name'}> { product.name } </ProductName>
               </ProductInfo>
             </SingleProduct>
           )
