@@ -71,7 +71,6 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "filepond": "^4.23.1",
-    "jest": "^26.6.3",
     "jest-enzyme": "^7.1.2",
     "jest-styled-components": "^7.0.3",
     "jsdom": "16.4.0",
