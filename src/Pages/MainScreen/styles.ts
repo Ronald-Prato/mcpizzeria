@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { primaryColor } from '../../constants';
+import { primaryColor, lightColor } from '../../constants';
 
 export const MainWrapper = styled.div `
-  width: 100vw;
-  max-width: 1350px;
+  width: 100vw !important;
+  max-width: 1550px;
   margin: 0 auto;
   height: 100vh;
   overflow: hidden;
@@ -44,9 +44,8 @@ export const MainContentLogin = styled.div `
   }
 `;
 
-export const BackgroundImageContainer = styled.div `
-  
 
+export const BackgroundImageContainer = styled.div `
   position: absolute;
   top: 0; left: 0;
   width: 100vw;
@@ -65,8 +64,6 @@ export const BackgroundImage = styled.img `
 
   position: absolute;
   z-index: 1;
-  max-width: 500px; 
-  max-height: 500px;
   width: 60%; height: auto;
   top: 2%;
   margin: 0 auto;
@@ -77,13 +74,11 @@ export const BackgroundImage = styled.img `
     max-width: 600px; 
     max-height: 600px;
     width: 50%; height: auto;
-    margin: auto;
-    right: 0; left: 0;
   }
 
   @media (min-width: 920px) {
-    width: 500px; 
-    height: 500px;
+    width: 600px; 
+    height: 600px;
     margin: auto;
     right: 0; left: 0;
     top: 0; bottom: 0;
@@ -102,14 +97,14 @@ export const BigMessage = styled.p `
 `;
 
 export const SmallMessage = styled.p `
-  color: #909090;
+  color: ${lightColor};
   margin: 0 0 25px 0;
 `;
 
 export const InputContainer = styled.div `
   width: 100%;
   max-width: 300px;
-  border: .5px solid #909090;
+  border: .5px solid ${lightColor};
   border-radius: 3px;
   display: flex;
   justify-content: space-between;
@@ -129,7 +124,7 @@ export const Input = styled.input `
   background: none;
   ::placeholder,
   ::-webkit-input-placeholder {
-    color: #909090;
+    color: ${lightColor};
     font-weight: lighter;
   }
 `;
@@ -143,6 +138,7 @@ export const ForgotPasswordMessage = styled.p `
   font-size: 12px;
   font-family: 'Montserrat';
   margin: 20px 0;
+  cursor: pointer;
 `;
 
 export const Button = styled.div `
