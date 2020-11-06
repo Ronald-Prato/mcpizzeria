@@ -78,23 +78,23 @@ const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
   }
 
   return (
-    <MainWrapper className={localTransitionClass}>
-      <BackIconContainer onClick={handleBackToList}>
+    <MainWrapper className={`main-wrapper ${localTransitionClass}`}>
+      <BackIconContainer className={'back-icon-container'} onClick={handleBackToList}>
         <IoMdArrowBack size={20} />
       </BackIconContainer>
       <CardContainer className={'card-container'}>
         <Card className={'card'}>
-          <Circle />
-          <ImgContainer>
+          <Circle className={'circle'}/>
+          <ImgContainer className={'image-container'}>
             <MainLogo className={'store-img'} src={store.logo}/>
           </ImgContainer>
-          <Info>
+          <Info className={'info'}>
             <StoreName className={'store-name'}> { store.name } </StoreName>
             <StoreAdress className={'store-address'}> { store.address } </StoreAdress>
             <StoreDescription className={'store-description'}> { store.description } </StoreDescription>
           </Info>
 
-          <SocialMediaContainer>
+          <SocialMediaContainer className={'social-media-container'}>
             <a className={'icon-insta'} href={store.instagram} target={"blank"}>
               <IoLogoInstagram style={{cursor: 'pointer'}} color={'black'} size={30}/>
             </a>
@@ -107,11 +107,11 @@ const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
 
       
 
-      <ProductsContainer>
+      <ProductsContainer className={'products-container'}>
         {
           store.products.map((product) => 
             <SingleProduct className={'single-product'} key={product.id}>
-              <ProductImg src={product.img}/>
+              <ProductImg className={'product-img'} src={product.img}/>
               <ProductInfo className={translationClass}>
                 <ProductName> { product.name } </ProductName>
               </ProductInfo>
