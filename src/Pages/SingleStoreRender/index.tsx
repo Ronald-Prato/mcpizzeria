@@ -25,13 +25,13 @@ const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
     const logoInsta: any = document.querySelector('.icon-insta');
     const logoFace: any = document.querySelector('.icon-face');
 
-    container?.addEventListener("mousemove", (e: any) => {
+    const mouseMoveCallback = (e: any) => {
       let xAxys = (window.innerWidth / 2 - e.pageX) / -12;
       let yAxys = (window.innerHeight / 2 - e.pageY) / 10;
       card.style.transform = `rotateY(${xAxys}deg) rotateX(${yAxys}deg)`;
-    });
+    };
 
-    container?.addEventListener("mouseenter", () => {
+    const mouseEnterCallback = () => {
       card.style.transition = 'none';
       logoImg.style.transform = 'translateZ(60px)';
       name.style.transform = 'translateZ(50px)';
@@ -39,9 +39,9 @@ const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
       description.style.transform = 'translateZ(50px)';
       logoInsta.style.transform = 'translateZ(50px)';
       logoFace.style.transform = 'translateZ(50px)';
-    });
+    };
 
-    container?.addEventListener("mouseleave", () => {
+    const mouseLeaveCallback = () => {
       card.style.transition = 'all .5s ease';
       logoInsta.style.transition = 'all .35s ease';
       logoFace.style.transition = 'all .6s ease';
@@ -53,10 +53,18 @@ const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
       description.style.transform = 'translateZ(0)';
       logoInsta.style.transform = 'translateZ(0)';
       logoFace.style.transform = 'translateZ(0)';
-    });
+    };
+
+    container?.addEventListener("mousemove", mouseMoveCallback);
+
+    container?.addEventListener("mouseenter", mouseEnterCallback);
+
+    container?.addEventListener("mouseleave", mouseLeaveCallback);
 
     return () => {
-      // container?.removeEventListener("mousemove", () => {}));
+      container?.removeEventListener("mousemove", mouseMoveCallback);
+      container?.removeEventListener("mouseenter", mouseEnterCallback);
+      container?.removeEventListener("mouseleave", mouseLeaveCallback);
     }
   })
 

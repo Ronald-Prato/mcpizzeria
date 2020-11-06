@@ -43,6 +43,8 @@
   "devDependencies": {
     "@types/react-router-dom": "^5.1.6",
     "@types/styled-components": "^5.1.4",
+    "filepond": "^4.23.1",
+    "react-filepond": "^7.1.0",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1",

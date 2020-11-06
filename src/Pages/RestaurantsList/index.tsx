@@ -1,18 +1,44 @@
 import React, { useState } from 'react';
 
-import { MainWrapper, SearchBarContainer, MainSection, NoResultsContainer, NoResultsMessage, SearchBar, CategoryContainer, CategoryMessage, SingleStoreName, SingleStoreAddress, SingleStoreLogo, SingleStore, Underline, StoresContainer, StoresSubtitle, StoresTitle } from './styles';
+import { MainWrapper, SearchBarContainer, MainSection, BurgerMenu, ShowOpacity, AccountSection, AccountIconContainer, NoResultsContainer, NoResultsMessage, SearchBar, CategoryContainer, CategoryMessage, SingleStoreName, SingleStoreAddress, SingleStoreLogo, SingleStore, Underline, StoresContainer, StoresSubtitle, StoresTitle } from './styles';
 
 import { RestaurantsListProps } from './index.d';
 
-import { IoMdSearch, IoIosHelp } from 'react-icons/io';
-import { lightColor } from '../../constants';
+import { IoMdSearch, IoIosHelp, IoMdPerson, IoIosMenu } from 'react-icons/io';
+import { primaryColor, lightColor } from '../../constants';
+import Menu from '../../Components/Menu';
 
-const RestaurantsList: RestaurantsListProps = ({ stores, showSingleStore }) => {
+const RestaurantsList: RestaurantsListProps = ({ stores, showSingleStore, signOut }) => {
   
   const [searchValue, setSearchValue] = useState('');
+  const [showMenu, setShowMenu] = useState(false);
+  const [aniamteOpacityOff, setAnimateOpacittyOf] = useState(false);
+  const [hideFromParentClass, setHideFromParentClass] = useState('');
+
+  const handleAnimationTimers = (fromParent: boolean) => {
+    fromParent && setHideFromParentClass('hidden');
+    setAnimateOpacittyOf(true)
+    setTimeout(() => {
+      setShowMenu(false);
+      setAnimateOpacittyOf(false);
+      setHideFromParentClass('');
+    }, 300);
+  };
 
   return (
     <MainWrapper>
+      <AccountSection onClick={() => setShowMenu(!showMenu)}>
+        <AccountIconContainer>
+          <IoMdPerson  color={'black'} size={30} />
+        </AccountIconContainer>
+      </AccountSection>
+
+      <BurgerMenu onClick={() => setShowMenu(!showMenu)}>
+        <IoIosMenu color={primaryColor} size={25}/>
+      </BurgerMenu>
+
+      { showMenu && <Menu signOut={signOut} hideFromParentClass={hideFromParentClass} hideMenu={(option) => handleAnimationTimers(option)}/> } { /* Conditionally rendering the menu */}
+
       <MainSection>
         <CategoryContainer>
           <CategoryMessage> Pizzerías </CategoryMessage>
@@ -54,6 +80,8 @@ const RestaurantsList: RestaurantsListProps = ({ stores, showSingleStore }) => {
             </NoResultsContainer>
         }
       </StoresContainer>
+
+      { showMenu && <ShowOpacity onClick={() => handleAnimationTimers(true)} className={aniamteOpacityOff ? 'start-leaving' : ''}/> }
     </MainWrapper>
   );
 };

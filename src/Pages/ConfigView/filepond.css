@@ -1,0 +1,21 @@
+.filepond--credits {
+  display: none !important;
+}
+
+.filepond--root, .filepond-modifier, .filepond--hopper, .filepond--drip, .filepond--panel, .filepond--panel-root, .filepond--drop-label {
+  width: 50px !important;
+  min-height: 50px !important;
+  height: 50px !important; 
+  background: none !important;
+  position: absolute !important;
+  cursor: pointer;
+}
+
+.filepond--file, 
+.filepond--list, 
+.filepond--drip, 
+.filepond--drop-label   
+.filepond--hopper,
+.filepond--file-wrapper {
+  display: none !important;
+}

@@ -14,7 +14,9 @@ export const MainWrapper = styled.div `
     box-shadow: 0 -20px 60px rgba(0, 0, 0, 1);  
     box-sizing: border-box;
     z-index: 10;
-
+    transition: ease 300ms;
+    position: relative;
+    
     @media (min-width: 920px) {
       border-radius: 0;
       background: white;
@@ -46,7 +48,7 @@ export const CategoryContainer = styled.div `
   justify-content: space-between;
   align-items: center;
   color: ${lightColor};
-  margin-bottom: 20px;
+  margin: 10px 0;
 
   @media (min-width: 920px) {
     margin-bottom: 70px;
@@ -163,10 +165,81 @@ export const NoResultsContainer = styled.div `
 
   @media (max-width: 920px) {
     margin: -100px 0 0 0;
-  }
+  } 
 `;
 
 export const NoResultsMessage = styled.p `
   color: ${lightColor};
   margin: 20px 0 0 0;
+`;
+
+export const AccountSection = styled.section `
+  display: none;
+
+  @media (min-width: 920px) {
+    display: block;
+    position: absolute;
+    top: 3%;
+    right: 4%;
+    cursor: pointer;
+  }
+`;
+
+export const AccountIconContainer = styled.div `
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #323232;
+`;
+
+export const BurgerMenu = styled.div `
+  position: fixed;
+  top: 2%; right: 4%;
+  z-index: 10000;
+  background: #323232;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 920px) {
+    display: none;
+  }
+`;
+
+
+
+export const ShowOpacity = styled.div `
+  @keyframes show-in  {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes show-out  {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100%;
+  justify-self: flex-end;
+  background: rgba(0, 0, 0, .5);
+  z-index: 1000;
+  animation: show-in 300ms forwards;
+
+  &.start-leaving {
+    animation: show-out 300ms forwards;
+  }
+
+  @media (min-width: 920px) {
+    position: absolute; 
+    top: 0; left: 0;
+    width: 50vw;
+  }
 `;
