@@ -18,5 +18,6 @@ export type SingleStore = {
 export type RestaurantsListProps = (props: {
   showSingleStore: (key: SingleStore) => void,
   stores: SingleStore[],
-  signOut: () => void
+  signOut: () => void,
+  hideListClass: string
 }) => React.ReactElement;

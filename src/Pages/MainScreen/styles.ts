@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { primaryColor, lightColor } from '../../constants';
 
 export const MainWrapper = styled.div `
-  width: 100vw;
+  width: 100vw !important;
   max-width: 1550px;
   margin: 0 auto;
   height: 100vh;
