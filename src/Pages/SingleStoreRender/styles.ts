@@ -2,28 +2,53 @@ import styled from 'styled-components';
 import { lightColor, primaryColor } from '../../constants';
 
 export const MainWrapper = styled.div `
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, .95);
-    align-self: flex-end;
-    height: 80vh;
-    border-radius: 30px 30px 0 0;
-    box-shadow: 0 -20px 60px rgba(0, 0, 0, 1);  
-    box-sizing: border-box;
-    z-index: 10;
-    padding: 20px 0;
-    position: relative;
+  @keyframes swipe-right {
+    from { transform: translateX(0) }
+    to { transform: translateX(100%) }
+  }
+  @keyframes swipe-left {
+    from { transform: translateX(100%) }
+    to { transform: translateX(0) }
+  }
+  @keyframes swipe-down {
+    from { transform: translateY(0) }
+    to { transform: translateY(100%) }
+  }
+  @keyframes swipe-up {
+    from { transform: translateY(100%) }
+    to { transform: translateY(0) }
+  }
 
-    @media (min-width: 920px) {
-      border-radius: 0;
-      background: white;
-      height: 100vh;
-      width: 50vw;
-      
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, .95);
+  align-self: flex-end;
+  height: 80vh;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -20px 60px rgba(0, 0, 0, 1);  
+  box-sizing: border-box;
+  z-index: 10;
+  padding: 20px 0;
+  position: relative;
+  animation: swipe-up 250ms forwards;
+  
+  &.hidden {
+    animation: swipe-down 250ms forwards;
+  }
+
+  @media (min-width: 920px) {
+    animation: swipe-left 250ms forwards;
+    border-radius: 0;
+    background: white;
+    height: 100vh;
+    width: 50vw;
+    
+    &.hidden {
+      animation: swipe-right 250ms forwards;
     }
+  }
 `;
 
 export const CardContainer = styled.div `

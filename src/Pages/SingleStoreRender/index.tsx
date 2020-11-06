@@ -14,6 +14,7 @@ type SingleStoreRenderProps = (props: {
 const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
 
   const [translationClass, setTranslationClass] = useState('translated');
+  const [localTransitionClass, setLocalTransitionClass] = useState('');
 
   useEffect(() => {
     const card: any = document.querySelector('.card');
@@ -68,9 +69,17 @@ const SingleStoreRender: SingleStoreRenderProps = ({ store, backToList }) => {
     }
   })
 
+  const handleBackToList = () => {
+    setLocalTransitionClass('hidden');
+
+    setTimeout(() => {
+      backToList();
+    }, 250);
+  }
+
   return (
-    <MainWrapper>
-      <BackIconContainer onClick={backToList}>
+    <MainWrapper className={localTransitionClass}>
+      <BackIconContainer onClick={handleBackToList}>
         <IoMdArrowBack size={20} />
       </BackIconContainer>
       <CardContainer className={'card-container'}>

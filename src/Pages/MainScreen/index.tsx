@@ -25,6 +25,7 @@ const MainScreen = () => {
   const [hasLogin, setHasLogin] = useState(false);
   const [showSingleStore, setShowSingleStore] = useState(false);
   const [selectedStore, setSelectedStore] = useState(selectedStoreInit);
+  const [hideListClass, setHideListClass] = useState('');
 
   const checkCurrentSession = () => { // check the session at first render
     if (localStorage.getItem('loggedUser')) {
@@ -45,8 +46,12 @@ const MainScreen = () => {
   useEffect(fireAlertMessage, [alertMessage]);
   
   const selectStore = (singleStore: SingleStore) => {
-    setSelectedStore(singleStore);
-    setShowSingleStore(true);
+    setHideListClass('hidden');
+
+    setTimeout(() => {
+      setSelectedStore(singleStore);
+      setShowSingleStore(true);
+    }, 250);
   };
 
   const validators = () => {
@@ -77,6 +82,14 @@ const MainScreen = () => {
       localStorage.setItem('loggedUser', JSON.stringify(isUser));
     }
   };
+
+  const handleBackToList = () => {
+    setHideListClass('showing');
+
+    setTimeout(() => {
+      setShowSingleStore(false);
+    }, 250);
+  }
 
   return (
     <MainWrapper className={`${COMP_NAME}__main-wrapper`}>
@@ -113,9 +126,9 @@ const MainScreen = () => {
         </MainContentLogin>
 
         : !showSingleStore ? // If a single store is not selected yet
-          <RestaurantsList signOut={() => setHasLogin(false)} showSingleStore={(singleStore) => selectStore(singleStore)} stores={API.response.stores}/>
+          <RestaurantsList hideListClass={hideListClass} signOut={() => setHasLogin(false)} showSingleStore={(singleStore) => selectStore(singleStore)} stores={API.response.stores}/>
         : // If a single store is selected
-        <SingleStoreRender backToList={() => setShowSingleStore(false)} store={selectedStore} /> 
+        <SingleStoreRender backToList={handleBackToList} store={selectedStore} /> 
       }
     </MainWrapper>
   );

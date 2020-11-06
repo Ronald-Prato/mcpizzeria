@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 
-import { MainWrapper, SearchBarContainer, MainSection, BurgerMenu, ShowOpacity, AccountSection, AccountIconContainer, NoResultsContainer, NoResultsMessage, SearchBar, CategoryContainer, CategoryMessage, SingleStoreName, SingleStoreAddress, SingleStoreLogo, SingleStore, Underline, StoresContainer, StoresSubtitle, StoresTitle } from './styles';
+import { MainWrapper, SearchBarContainer, MainSection, BurgerMenu, ProfilePicture, ShowOpacity, AccountSection, AccountIconContainer, NoResultsContainer, NoResultsMessage, SearchBar, CategoryContainer, CategoryMessage, SingleStoreName, SingleStoreAddress, SingleStoreLogo, SingleStore, Underline, StoresContainer, StoresSubtitle, StoresTitle } from './styles';
 
 import { RestaurantsListProps } from './index.d';
 
 import { IoMdSearch, IoIosHelp, IoMdPerson, IoIosMenu } from 'react-icons/io';
 import { primaryColor, lightColor } from '../../constants';
 import Menu from '../../Components/Menu';
+import { User } from '../../globalTypes';
 
-const RestaurantsList: RestaurantsListProps = ({ stores, showSingleStore, signOut }) => {
+const RestaurantsList: RestaurantsListProps = ({ stores, showSingleStore, signOut, hideListClass }) => {
   
   const [searchValue, setSearchValue] = useState('');
   const [showMenu, setShowMenu] = useState(false);
   const [aniamteOpacityOff, setAnimateOpacittyOf] = useState(false);
   const [hideFromParentClass, setHideFromParentClass] = useState('');
+  const currentUser: User = JSON.parse(localStorage.getItem('loggedUser') || '');
+  const cachedProfileImage = localStorage.getItem(`image-${currentUser.email}`);
 
   const handleAnimationTimers = (fromParent: boolean) => {
     fromParent && setHideFromParentClass('hidden');
@@ -26,10 +29,15 @@ const RestaurantsList: RestaurantsListProps = ({ stores, showSingleStore, signOu
   };
 
   return (
-    <MainWrapper>
+    <MainWrapper className={hideListClass}>
       <AccountSection onClick={() => setShowMenu(!showMenu)}>
         <AccountIconContainer>
-          <IoMdPerson  color={'black'} size={30} />
+          {
+            cachedProfileImage ?
+            <ProfilePicture src={cachedProfileImage}/>
+            :
+            <IoMdPerson color={'black'} size={30} />
+          }
         </AccountIconContainer>
       </AccountSection>
 
