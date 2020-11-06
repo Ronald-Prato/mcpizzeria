@@ -69,6 +69,7 @@ export const MainSection = styled.section `
 
   @media (min-width: 920px) {
     margin-top: 200px;
+    align-items: flex-start;
   }
 `;
 
