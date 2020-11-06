@@ -14,6 +14,4 @@ Despliegue continuo con **vercel now** <https://mcpizzeria.vercel.app>
 3. ``` npm i ```
 4. ``` npm start ```
 
-:::success 
-Ir a la ruta **/home** 
-:::
+### Ir a la ruta **/home** 
