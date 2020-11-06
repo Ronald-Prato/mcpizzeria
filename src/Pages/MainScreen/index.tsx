@@ -11,7 +11,6 @@ import API from '../../api.json';
 import { Toast } from '../../alerts';
 import RestaurantsList from '../RestaurantsList';
 import SingleStoreRender from '../SingleStoreRender';
-import ConfigView from '../ConfigView';
 
 import { SingleStore } from '../RestaurantsList/index.d';
 

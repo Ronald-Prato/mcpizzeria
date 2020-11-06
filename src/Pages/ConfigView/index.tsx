@@ -40,35 +40,34 @@ const ConfigView: ConfigViewProps = ({ history }) => {
   }, [localFile]);
 
   return (
-    <MainWrapper>
-      <PizzaContainer>
-        <PizzaBackground src={pizzaImg}/>
+    <MainWrapper className={'main-wrapper'}>
+      <PizzaContainer className={'pizza-container'}>
+        <PizzaBackground className={'pizza-img'} src={pizzaImg}/>
       </PizzaContainer>
-      <MainContent>
-        <Card>
-
-          <BackIconContainer onClick={() => history.push('/home')}>
+      <MainContent className={'main-content'}>
+        <Card className={'card'}>
+          <BackIconContainer className={'back-icon-container'} onClick={() => history.push('/home')}>
             <IoMdArrowBack size={25}/>
           </BackIconContainer>
 
-          <UserImageContainer>
+          <UserImageContainer className={'user-img-container'}>
             {
               localImage?.length ?
-                <UserImage src={localImage || ''}/>
+                <UserImage className={'user-img'} src={localImage || ''}/>
               :
                 <IoMdPerson style={{cursor: 'pointer'}} color={'#323232'} size={100}/>
             }
             
           </UserImageContainer>
 
-          <UserName> { currentUser.name } </UserName>
-          <EmailAdress> { currentUser.email } </EmailAdress>
+          <UserName className={'user-name'}> { currentUser.name } </UserName>
+          <EmailAdress className={'user-email'}> { currentUser.email } </EmailAdress>
           
-          <EditIconContainer>
+          <EditIconContainer className={'edit-icon-container'}>
             <IoMdCreate color={'#323232'} size={25}/>
           </EditIconContainer>
 
-          <InputContainer>
+          <InputContainer className={'input-container'}>
             <FilePond
                 labelIdle=''
                 className={'filepond-modifier'}

@@ -59,7 +59,7 @@ export const MainWrapper = styled.div `
   }
 `;
 
-export const MainSection = styled.div `
+export const MainSection = styled.section `
   margin-top: 0;
   width: 100%;
   display: flex;

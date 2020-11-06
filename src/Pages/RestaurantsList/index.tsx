@@ -29,61 +29,61 @@ const RestaurantsList: RestaurantsListProps = ({ stores, showSingleStore, signOu
   };
 
   return (
-    <MainWrapper className={hideListClass}>
-      <AccountSection onClick={() => setShowMenu(!showMenu)}>
-        <AccountIconContainer>
+    <MainWrapper className={`main-wrapper ${hideListClass}`}>
+      <AccountSection className={'about-section'} onClick={() => setShowMenu(!showMenu)}>
+        <AccountIconContainer className={'account-icon-container'}>
           {
             cachedProfileImage ?
-            <ProfilePicture src={cachedProfileImage}/>
+            <ProfilePicture className={'profile-picture'} src={cachedProfileImage}/>
             :
             <IoMdPerson color={'black'} size={30} />
           }
         </AccountIconContainer>
       </AccountSection>
 
-      <BurgerMenu onClick={() => setShowMenu(!showMenu)}>
+      <BurgerMenu className={'burger-menu'} onClick={() => setShowMenu(!showMenu)}>
         <IoIosMenu color={primaryColor} size={25}/>
       </BurgerMenu>
 
       { showMenu && <Menu signOut={signOut} hideFromParentClass={hideFromParentClass} hideMenu={(option) => handleAnimationTimers(option)}/> } { /* Conditionally rendering the menu */}
 
-      <MainSection>
-        <CategoryContainer>
-          <CategoryMessage> Pizzerías </CategoryMessage>
-          <Underline />
+      <MainSection className={'main-section'}>
+        <CategoryContainer className={'category-container'}>
+          <CategoryMessage className={'category-message'}> Pizzerías </CategoryMessage>
+          <Underline className={'underline'}/>
         </CategoryContainer>
 
-        <StoresTitle> Tiendas </StoresTitle>
-        <StoresSubtitle> Escoge tu pizzería favorita </StoresSubtitle>
+        <StoresTitle className={'store-title'}> Tiendas </StoresTitle>
+        <StoresSubtitle className={'store-subtitle'}> Escoge tu pizzería favorita </StoresSubtitle>
 
-        <SearchBarContainer>
-          <SearchBar value={searchValue} onChange={(e) => setSearchValue(e.target.value)} placeholder={'Buscar una pizzería'}/>
+        <SearchBarContainer className={'search-bar-container'}>
+          <SearchBar className={'search-bar'} value={searchValue} onChange={(e) => setSearchValue(e.target.value)} placeholder={'Buscar una pizzería'}/>
           <IoMdSearch size={20}/>
         </SearchBarContainer>
       </MainSection>
 
 
-      <StoresContainer>
+      <StoresContainer className={'stores-container'}>
         {
           !searchValue.trim().length ?
           stores.map((store) => 
-            <SingleStore onClick={() => showSingleStore(store)} key={store.id}>
-              <SingleStoreLogo src={store.logo}/>
-              <SingleStoreName> { store.name } </SingleStoreName>
-              <SingleStoreAddress> { store.address } </SingleStoreAddress>
+            <SingleStore className={'single-store'} onClick={() => showSingleStore(store)} key={store.id}>
+              <SingleStoreLogo className={'single-store-logo'} src={store.logo}/>
+              <SingleStoreName className={'single-store-name'}> { store.name } </SingleStoreName>
+              <SingleStoreAddress className={'single-store-address'}> { store.address } </SingleStoreAddress>
             </SingleStore>
           )
           : stores.filter((store) => store.name.toLowerCase().includes(searchValue.trim().toLocaleLowerCase())).length ?
             stores.filter((store) => store.name.toLowerCase().includes(searchValue.trim().toLocaleLowerCase())).map((store) => 
-              <SingleStore onClick={() => showSingleStore(store)} key={store.id}>
-                <SingleStoreLogo src={store.logo}/>
-                <SingleStoreName> { store.name } </SingleStoreName>
-                <SingleStoreAddress> { store.address } </SingleStoreAddress>
+              <SingleStore className={'single-store'} onClick={() => showSingleStore(store)} key={store.id}>
+                <SingleStoreLogo className={'single-store-logo'} src={store.logo}/>
+                <SingleStoreName className={'single-store-name'}> { store.name } </SingleStoreName>
+                <SingleStoreAddress className={'single-store-address'}> { store.address } </SingleStoreAddress>
               </SingleStore>
             )
           :
-            <NoResultsContainer>
-              <NoResultsMessage> No se ha encontrado la pizzería </NoResultsMessage>
+            <NoResultsContainer className={'no-results-container'}>
+              <NoResultsMessage className={'no-results-message'}> No se ha encontrado la pizzería </NoResultsMessage>
               <IoIosHelp style={{marginTop: '-50px'}} color={lightColor} size={200}/>
             </NoResultsContainer>
         }
