@@ -5,13 +5,13 @@
         "id": 1,
         "name": "Pepito Perez",
         "email": "pperez@perez.com",
-        "password": "pperezs123"
+        "password": "rp1234"
       },
       {
         "id": 2,
         "name": "Juanpis Gonzalez",
         "email": "jgonzalez@gonzalez.com",
-        "password": "jgonzalez123"
+        "password": "rp1234"
       }
     ],
     "stores": [
