@@ -2,7 +2,7 @@
 
 ![](https://i.imgur.com/ePJR3zU.jpg)
 
-Despliegue continuo con **vercel now** <https://mcpizzeria.vercel.app>
+Despliegue continuo con **vercel now** <https://mcpizzeria.vercel.app/home>
 
 
 ---
